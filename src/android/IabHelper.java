@@ -15,7 +15,8 @@
 
 package com.smartmobilesoftware.util;
 
-import android.widget.Toast;
+import android.app.AlertDialog.Builder
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
