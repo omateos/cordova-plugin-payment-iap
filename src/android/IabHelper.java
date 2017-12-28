@@ -15,8 +15,9 @@
 
 package com.smartmobilesoftware.util;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import android.app.Activity;
 import android.app.PendingIntent;
