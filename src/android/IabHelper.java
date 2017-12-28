@@ -986,9 +986,7 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			AlertDialog.Builder builder1 = new AlertDialog.Builder(mContext);
-			builder1.setMessage(ex.getMessage());
-			builder1.setCancelable(true);
+			JOptionPane.showMessageDialog(null, "Error: "+ex.getCause().getMessage());
 		}
     }
 
