@@ -15,7 +15,7 @@
 
 package com.smartmobilesoftware.util;
 
-import android.app.AlertDialog.Builder;
+import android.app.AlertDialog;
 
 import android.app.Activity;
 import android.app.PendingIntent;
