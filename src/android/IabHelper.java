@@ -15,9 +15,7 @@
 
 package com.smartmobilesoftware.util;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import android.app.Activity;
 import android.app.PendingIntent;
