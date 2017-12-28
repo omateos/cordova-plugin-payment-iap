@@ -955,7 +955,7 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			Toast.makeText(mContext, ex.getMessage().toString(), Toast.LENGTH_LONG).show();
+			//Toast.makeText(mContext, ex.getMessage().toString(), Toast.LENGTH_LONG).show();
 		}
     }
 
