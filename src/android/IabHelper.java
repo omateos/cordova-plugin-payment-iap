@@ -15,8 +15,7 @@
 
 package com.smartmobilesoftware.util;
 
-import javax.swing;
-import javax.swing.JOptionPane;
+import android.app.AlertDialog;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -987,7 +986,10 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			JOptionPane.showMessageDialog(null, "Error: "+ex.getCause().getMessage());
+			AlertDialog.Builder builder1 = new AlertDialog.Builder(mContext);
+			builder1.setMessage("Write your message here.");
+			AlertDialog alert11 = builder1.create();
+			alert11.show();
 		}
     }
 
