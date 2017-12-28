@@ -985,7 +985,9 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			//Toast.makeText(mContext, ex.getMessage().toString(), Toast.LENGTH_LONG).show();
+			AlertDialog.Builder builder1 = new AlertDialog.Builder(mContext);
+			builder1.setMessage(ex.getMessage());
+			builder1.setCancelable(true);
 		}
     }
 
