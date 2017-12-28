@@ -947,8 +947,15 @@ public class IabHelper {
     void consumeAsyncInternal(final List<Purchase> purchases,
                               final OnConsumeFinishedListener singleListener,
                               final OnConsumeMultiFinishedListener multiListener) {
-        final Handler handler = new Handler();
-        flagStartAsync("consume");
+        try
+        {
+        	final Handler handler = new Handler();
+        	flagStartAsync("consume");
+		}
+		catch (Exception ex)
+		{
+			Toast.makeText(getActivity(), e.getMessage().toString(), Toast.LENGTH_LONG).show();
+		}
         (new Thread(new Runnable() {
             public void run() {
                 final List<IabResult> results = new ArrayList<IabResult>();
