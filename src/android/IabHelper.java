@@ -1008,7 +1008,7 @@ public class IabHelper {
 			    });
 
 			AlertDialog alert11 = builder1.create();
-			alert11.show();
+			//alert11.show();
 		}
     }
 
