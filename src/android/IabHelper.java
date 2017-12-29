@@ -15,6 +15,8 @@
 
 package com.smartmobilesoftware.util;
 
+import android.widget.Toast;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -984,8 +986,7 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			Toast toast = Toast.makeText(mContext, "Hello", Toast.LENGTH_LONG);
-			toast.show();
+			Toast.makeText(mContext, "Try", Toast.LENGTH_LONG).show();
 		}
     }
 
