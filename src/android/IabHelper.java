@@ -986,7 +986,7 @@ public class IabHelper {
 		}
 		catch (PomodroidException e)
 		{
-    		e.alertUser(this);
+    		e.alertUser(mContext);
 		}
     }
 
