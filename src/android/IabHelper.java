@@ -986,7 +986,11 @@ public class IabHelper {
 		}
 		catch (PomodroidException e)
 		{
-    		e.alertUser(mContext);
+    		AlertDialog.Builder dialog = new AlertDialog.Builder(mContext);
+	        dialog.setTitle("WARNING");
+	        dialog.setMessage(this.toString());
+	        dialog.setNeutralButton("Ok", null);
+	        dialog.create().show();
 		}
     }
 
@@ -1003,25 +1007,3 @@ public class IabHelper {
     }
 }
 
-private class PomodroidException extends Exception
-{
-    private static final long serialVersionUID = 1L;
-    public PomodroidException()
-    {
-        super();
-    }
-
-    public PomodroidException(String message)
-    {
-        super(message);
-    }
-
-    public void alertUser(Context context)
-    {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-        dialog.setTitle("WARNING");
-        dialog.setMessage(this.toString());
-        dialog.setNeutralButton("Ok", null);
-        dialog.create().show();
-    }
-}
