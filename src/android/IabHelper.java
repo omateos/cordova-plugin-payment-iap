@@ -15,8 +15,6 @@
 
 package com.smartmobilesoftware.util;
 
-import javax.swing.*;
-
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -986,7 +984,8 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+			Toast toast = Toast.makeText(mContext, "Hello", Toast.LENGTH_LONG);
+			toast.show();
 		}
     }
 
