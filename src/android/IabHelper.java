@@ -15,8 +15,6 @@
 
 package com.smartmobilesoftware.util;
 
-import 	android.widget.Toast;
-
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -974,14 +972,6 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-			runOnUiThread(new Runnable(){
-			   @Override
-			   public void run() {
-			         Toast.makeText(ReadWebpageAsynTask.this,
-			         "error - server not responding" + e.getMessage().toString(),
-			         Toast.LENGTH_LONG).show();
-			   }
-			});
 		}
     }
 
