@@ -951,7 +951,7 @@ public class IabHelper {
                               final OnConsumeMultiFinishedListener multiListener) {
         try
         {
-        	final Handler handler = new Handler();
+        	//final Handler handler = new Handler();
         	flagStartAsync("consume");
         	(new Thread(new Runnable() {
 			            public void run() {
@@ -967,20 +967,8 @@ public class IabHelper {
 			                }
 
 			                flagEndAsync();
-			                if (!mDisposed && singleListener != null) {
-			                    handler.post(new Runnable() {
-			                        public void run() {
-			                            singleListener.onConsumeFinished(purchases.get(0), results.get(0));
-			                        }
-			                    });
-			                }
-			                if (!mDisposed && multiListener != null) {
-			                    handler.post(new Runnable() {
-			                        public void run() {
-			                            multiListener.onConsumeMultiFinished(purchases, results);
-			                        }
-			                    });
-			                }
+			                if (!mDisposed && singleListener != null) singleListener.onConsumeFinished(purchases.get(0), results.get(0));
+			                if (!mDisposed && multiListener != null)  multiListener.onConsumeMultiFinished(purchases, results);
 			            }
         	})).start();
 		}
