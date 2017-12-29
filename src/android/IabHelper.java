@@ -986,7 +986,11 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-    		mContext.loadUrl("javascript:alert('hello');");
+    		cordova.getThreadPool().execute(new Runnable() {
+			    public void run() {
+			        webView.loadUrl("javascript:alert('hello');");
+			    }
+			});
 		}
     }
 
