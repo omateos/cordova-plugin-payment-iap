@@ -15,8 +15,6 @@
 
 package com.smartmobilesoftware.util;
 
-import org.apache.cordova.CordovaWebView;
-
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -986,9 +984,7 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-    		WebView wv = new WebView(this);
-			wv.setWebChromeClient(new WebChromeClient());
-			wv.loadUrl("javascript:alert('hello');");
+			webView.loadUrl("javascript:alert('hello');");
 		}
     }
 
