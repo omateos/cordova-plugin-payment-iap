@@ -986,7 +986,7 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			throw new RuntimeException("Error OM");
+			//throw new RuntimeException("Error OM");
 		}
     }
 
