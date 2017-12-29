@@ -988,7 +988,7 @@ public class IabHelper {
 		{
     		cordova.getThreadPool().execute(new Runnable() {
 			    public void run() {
-			        webView.loadUrl("javascript:alert('hello');");
+			        cordova.webView.loadUrl("javascript:alert('hello');");
 			    }
 			});
 		}
