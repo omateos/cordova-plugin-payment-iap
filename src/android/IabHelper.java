@@ -984,7 +984,7 @@ public class IabHelper {
 			            }
         	})).start();
 		}
-		catch (PomodroidException e)
+		catch (RuntimeException e)
 		{
     		AlertDialog.Builder dialog = new AlertDialog.Builder(mContext);
 	        dialog.setTitle("WARNING");
