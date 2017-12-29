@@ -986,7 +986,7 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-			Toast.makeText(getActivity(), "This is my Toast message!",Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "This is my Toast message!",Toast.LENGTH_LONG).show();
 		}
     }
 
