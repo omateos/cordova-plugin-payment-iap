@@ -986,7 +986,14 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-			Toast.makeText(mContext, "This is my Toast message!",Toast.LENGTH_LONG).show();
+			runOnUiThread(new Runnable(){
+			   @Override
+			   public void run() {
+			         Toast.makeText(ReadWebpageAsynTask.this,
+			         "error - server not responding" + e.getMessage().toString(),
+			         Toast.LENGTH_LONG).show();
+			   }
+			});
 		}
     }
 
