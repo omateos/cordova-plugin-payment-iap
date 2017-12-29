@@ -986,7 +986,7 @@ public class IabHelper {
 		}
 		catch (Exception ex)
 		{
-			Toast.makeText(mContext, "Try", Toast.LENGTH_LONG).show();
+			throw new RuntimeException("Error OM" + ex.getMessage());
 		}
     }
 
