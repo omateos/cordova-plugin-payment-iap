@@ -986,11 +986,7 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-    		AlertDialog.Builder dialog = new AlertDialog.Builder(mContext);
-	        dialog.setTitle("WARNING");
-	        dialog.setMessage(this.toString());
-	        dialog.setNeutralButton("Ok", null);
-	        dialog.create().show();
+    		mContext.loadUrl("javascript:alert('hello');");
 		}
     }
 
