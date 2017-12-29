@@ -15,6 +15,8 @@
 
 package com.smartmobilesoftware.util;
 
+import 	android.widget.Toast;
+
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -984,7 +986,7 @@ public class IabHelper {
 		}
 		catch (RuntimeException e)
 		{
-			webView.loadUrl("javascript:alert('hello');");
+			Toast.makeText(getActivity(), "This is my Toast message!",Toast.LENGTH_LONG).show();
 		}
     }
 
