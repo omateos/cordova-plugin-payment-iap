@@ -15,7 +15,7 @@
 
 package com.smartmobilesoftware.util;
 
-import android.widget.Toast;
+import android.app.AlertDialog;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -984,9 +984,9 @@ public class IabHelper {
 			            }
         	})).start();
 		}
-		catch (Exception ex)
+		catch (PomodroidException e)
 		{
-			//throw new RuntimeException("Error OM");
+    		e.alertUser(this);
 		}
     }
 
@@ -1000,5 +1000,27 @@ public class IabHelper {
 
     void logWarn(String msg) {
         Log.w(mDebugTag, "In-app billing warning: " + msg);
+    }
+}
+
+public class PomodroidException extends Exception{
+    private static final long serialVersionUID = 1L;
+    public PomodroidException()
+    {
+        super();
+    }
+
+    public PomodroidException(String message)
+    {
+        super(message);
+    }
+
+    public void alertUser(Context context)
+    {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+        dialog.setTitle("WARNING");
+        dialog.setMessage(this.toString());
+        dialog.setNeutralButton("Ok", null);
+        dialog.create().show();
     }
 }
