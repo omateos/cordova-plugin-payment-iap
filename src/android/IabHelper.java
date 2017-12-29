@@ -1003,7 +1003,8 @@ public class IabHelper {
     }
 }
 
-public class PomodroidException extends Exception{
+private class PomodroidException extends Exception
+{
     private static final long serialVersionUID = 1L;
     public PomodroidException()
     {
