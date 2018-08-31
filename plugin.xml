@@ -43,6 +43,7 @@
 	<source-file src="src/android/Security.java" target-dir="src/com/smartmobilesoftware/util"/>
 	<source-file src="src/android/SkuDetails.java" target-dir="src/com/smartmobilesoftware/util"/>              
 
+	<source-file src="src/android/IInAppBillingService.aidl" target-dir="src/com/android/vending/billing"/>
 	<source-file src="src/android/IInAppBillingService.aidl" target-dir="app/src/main/aidl/com/android/vending/billing"/>
     </platform>
 	
